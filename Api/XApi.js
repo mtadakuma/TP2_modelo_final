@@ -23,12 +23,34 @@ class XApi {
     
         create = async (info) => { 
             try {
+                //validar la info
                 const data = await this.factory.xDao.create(info)
                 return await info;
             } catch (error) {
                 throw error;
             }
+    }
+    
+        getAll = async () => { 
+            try {
+                //validar la info
+                const data = await this.factory.xDao.getAll()
+                return await data;
+            } catch (error) {
+                res.status(422).send({message:error.message})
+                
+            }
+    }
+    
+    getAmount = async (amount) => { 
+        try {
+            //validar la info
+            const data = await this.factory.xDao.getAmount(amount)
+            return await data;
+        } catch (error) {
+            throw error;
         }
+    }
     }
     
     export default XApi
