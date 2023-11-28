@@ -1,7 +1,7 @@
 import express from "express"
 import { SERVER_PORT } from "./Config/config.js"
 import router from "./routes/router.js"
-import generalError from "./Middlewares/GeneralError.js"
+import generalError from "./middlewares/GeneralError.js"
 
 const app = express()
 
