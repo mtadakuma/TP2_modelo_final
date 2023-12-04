@@ -23,5 +23,12 @@ const esTextoNumerico = (text) => {
     return false
 }
 
+const esMailValido = (text) => { 
+    if (/^\S+@\S+\.\S+$/.test(text)) { 
+        return true
+    }
+    return false
+}
 
-export { loggear, esTextoVacio, esTextoAlfabetico, esTextoNumerico }
+
+export { loggear, esTextoVacio, esTextoAlfabetico, esTextoNumerico, esMailValido }

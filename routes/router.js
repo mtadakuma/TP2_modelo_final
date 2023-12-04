@@ -1,10 +1,10 @@
 import { Router } from "express"
 import xRoutes from "./xRoutes.js";
-import { notFound } from "../Middlewares/notFound.js";
+import userRoutes from "./userRoutes.js";
+
 const router = Router()
 
-
 router.use("/x", xRoutes)
-xRoutes.use(notFound)
+router.use("/users", userRoutes)
 
 export default router;
